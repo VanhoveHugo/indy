@@ -6,8 +6,8 @@ CREATE TABLE IF NOT EXISTS `indy`.`users` (
   `lastname` VARCHAR(255) NOT NULL,
   `status` BOOLEAN NOT NULL,
   `active` BOOLEAN NOT NULL,
-  `created` datetime NOT NULL,
-  `updated` datetime NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
@@ -16,24 +16,24 @@ CREATE TABLE IF NOT EXISTS `indy`.`tips` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `fk_uid` INT(11) NOT NULL,
   `name` VARCHAR(255) NOT NULL,
-  `created` datetime NOT NULL,
-  `updated` datetime NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `indy`.`tables` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
-  `created` datetime NOT NULL,
-  `updated` datetime NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `indy`.`tables_tips` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
-  `created` datetime NOT NULL,
-  `updated` datetime NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `indy`.`services` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `shiftType` INT NOT NULL,
   `shiftClose` BOOLEAN NOT NULL,
-  `created` datetime NOT NULL,
-  `updated` datetime NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
