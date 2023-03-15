@@ -1,5 +1,3 @@
-// create Errors controller to handle errors and responses to client requests type : Erros.notFound
-
 const Errors = {
     internalServerError: (res) => {
         res.status(500).send('Le serveur a rencontré une erreur interne')
