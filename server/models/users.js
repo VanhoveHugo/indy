@@ -43,7 +43,7 @@ class User {
     }
 
     static find(id, callback) {
-        db.query("SELECT id, created, firstname, lastname, status, active FROM users WHERE id = ?", [id], (err, result) => {
+        db.query("SELECT * FROM users WHERE id = ?", [id], (err, result) => {
             if (err) throw err
             callback(new User(result[0]))
         })
@@ -67,7 +67,7 @@ class User {
         })
     }
     static delete(id, callback) {
-        db.query('DELETE FROM users WHERE id = ?', [id], (err, res) => {
+        db.query('UPDATE users SET firstname = ?, lastname = ?, status = ?, active = ? WHERE id = ?', ["NaN", "NaN", 0, 0, id], (err, res) => {
             if (err) throw err
             callback(res)
         })

@@ -32,7 +32,7 @@ class Tips {
         return this._lastname
     }
     static create(userid, name, callback) {
-        db.query('INSERT INTO tips (uid, name) VALUES (?, ?)', [userid, name], (err, result) => {
+        db.query('INSERT INTO tips (fk_uid, name) VALUES (?, ?)', [userid, name], (err, result) => {
             if (err) throw err
             callback(new Tips(result))
         })
@@ -53,6 +53,12 @@ class Tips {
         db.query('DELETE FROM tips WHERE id = ?', [id], (err, result) => {
             if (err) throw err
             callback(new Tips(result))
+        })
+    }
+    static find(id, callback) {
+        db.query("SELECT * FROM tips WHERE id = ?", [id], (err, result) => {
+            if (err) throw err
+            callback(new Tips(result[0]))
         })
     }
 }
