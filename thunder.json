@@ -1,0 +1,435 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Indy",
+    "dateExported": "2023-03-21T21:25:19.337Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "42dab64a-efa0-42dd-850f-5058e462597b",
+            "name": "Users",
+            "containerId": "",
+            "created": "2023-03-21T15:44:09.048Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "6126f1be-089a-4c15-b76e-84e2f7ee1444",
+            "name": "Tips",
+            "containerId": "",
+            "created": "2023-03-21T15:48:07.369Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "86a69efa-96b3-4dff-a97c-079b9017a49e",
+            "name": "Services",
+            "containerId": "",
+            "created": "2023-03-21T15:48:18.858Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "9328e31d-207b-46d9-94e9-444df0769d17",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2023-03-21T20:19:17.166Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "f4f7e8eb-48f5-45fc-bb0a-74982cb1e17f",
+            "name": "Stats",
+            "containerId": "",
+            "created": "2023-03-21T21:24:37.248Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f5857e3d-6f30-49bb-ad2a-51037d9b45b2",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "42dab64a-efa0-42dd-850f-5058e462597b",
+            "name": "createUser",
+            "url": "http://localhost:3000/users",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-03-21T15:40:19.466Z",
+            "modified": "2023-03-21T21:14:25.534Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "firstname",
+                        "value": "Hugo"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Nom"
+                    },
+                    {
+                        "name": "status",
+                        "value": "0"
+                    },
+                    {
+                        "name": "active",
+                        "value": "0"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6bfae3a9-34c2-45bf-8efe-b7bf6996de8f",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "42dab64a-efa0-42dd-850f-5058e462597b",
+            "name": "getAllUsers",
+            "url": "http://localhost:3000/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-21T15:39:51.803Z",
+            "modified": "2023-03-21T15:44:12.104Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6a96b504-4a5a-4a1d-8ea6-2d5b63f485be",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "6126f1be-089a-4c15-b76e-84e2f7ee1444",
+            "name": "createTip",
+            "url": "http://localhost:3000/tips",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-21T21:13:53.409Z",
+            "modified": "2023-03-21T21:15:03.698Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userid",
+                        "value": "1"
+                    },
+                    {
+                        "name": "name",
+                        "value": "Pb"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "7abc26ee-34f9-4acb-a3ba-61c1426320f2",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "42dab64a-efa0-42dd-850f-5058e462597b",
+            "name": "getUser",
+            "url": "http://localhost:3000/users/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-21T15:42:22.494Z",
+            "modified": "2023-03-21T15:44:12.881Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "30132326-1912-4fdd-8ac4-1a93dd00614c",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "6126f1be-089a-4c15-b76e-84e2f7ee1444",
+            "name": "getAllTips",
+            "url": "http://localhost:3000/tips",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-21T21:17:23.653Z",
+            "modified": "2023-03-21T21:17:35.668Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userid",
+                        "value": "1"
+                    },
+                    {
+                        "name": "name",
+                        "value": "Pb"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "be2ac8cf-2496-4570-8160-5dbde7f8554b",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "6126f1be-089a-4c15-b76e-84e2f7ee1444",
+            "name": "deteleTip",
+            "url": "http://localhost:3000/tips/1",
+            "method": "DELETE",
+            "sortNum": 25000,
+            "created": "2023-03-21T21:21:21.898Z",
+            "modified": "2023-03-21T21:21:51.048Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "392ebbee-0a00-4348-af6e-ec30b6d2a075",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "86a69efa-96b3-4dff-a97c-079b9017a49e",
+            "name": "getAllServices",
+            "url": "http://localhost:3000/services",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-03-21T15:48:52.915Z",
+            "modified": "2023-03-21T15:49:04.863Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7393ee7b-0f2c-438c-9cfc-b660ee1636da",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "6126f1be-089a-4c15-b76e-84e2f7ee1444",
+            "name": "getTip",
+            "url": "http://localhost:3000/tips/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-03-21T21:17:43.025Z",
+            "modified": "2023-03-21T21:20:55.691Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9dd1633c-7a56-4d80-98b5-9162d6f756eb",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "42dab64a-efa0-42dd-850f-5058e462597b",
+            "name": "deleteUser",
+            "url": "http://localhost:3000/users/1",
+            "method": "PUT",
+            "sortNum": 35000,
+            "created": "2023-03-21T15:44:19.379Z",
+            "modified": "2023-03-21T21:14:18.140Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "firstname",
+                        "value": "Hugo"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Toto"
+                    },
+                    {
+                        "name": "status",
+                        "value": "0"
+                    },
+                    {
+                        "name": "active",
+                        "value": "0"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "11cc3da8-6869-4b2c-8ec1-180d26eb1e67",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "86a69efa-96b3-4dff-a97c-079b9017a49e",
+            "name": "getService",
+            "url": "http://localhost:3000/services/1",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-03-21T15:54:21.481Z",
+            "modified": "2023-03-21T15:54:24.802Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "83af3427-e522-439b-a1ee-1acde67421b1",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "86a69efa-96b3-4dff-a97c-079b9017a49e",
+            "name": "updateService",
+            "url": "http://localhost:3000/services/1",
+            "method": "PUT",
+            "sortNum": 37500,
+            "created": "2023-03-21T20:03:26.124Z",
+            "modified": "2023-03-21T20:04:55.449Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "shiftType",
+                        "value": "0"
+                    },
+                    {
+                        "name": "shiftClose",
+                        "value": "0"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "01407434-1ab6-4ff5-9aa1-e76d2c23fd9b",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "86a69efa-96b3-4dff-a97c-079b9017a49e",
+            "name": "createService",
+            "url": "http://localhost:3000/services",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-03-21T15:49:27.495Z",
+            "modified": "2023-03-21T15:51:39.187Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "shiftType",
+                        "value": "1"
+                    },
+                    {
+                        "name": "shiftClose",
+                        "value": "0"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fa7ef975-71f7-4a46-99a8-0ec841c0cff2",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "9328e31d-207b-46d9-94e9-444df0769d17",
+            "name": "createAdmin",
+            "url": "http://localhost:3000/admin/new",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-03-21T20:19:29.699Z",
+            "modified": "2023-03-21T21:01:29.241Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "pincode",
+                        "value": "2020"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c9fcf92d-dc6a-4769-9bd3-1eb0fdfcaa91",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "6126f1be-089a-4c15-b76e-84e2f7ee1444",
+            "name": "updateTip",
+            "url": "http://localhost:3000/tips/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-03-21T21:18:41.110Z",
+            "modified": "2023-03-21T21:20:25.164Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "toto"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c20118d7-7e09-486d-89d3-fcce8ee8c74b",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "42dab64a-efa0-42dd-850f-5058e462597b",
+            "name": "updateUser",
+            "url": "http://localhost:3000/users/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-03-21T15:42:48.666Z",
+            "modified": "2023-03-21T21:14:19.376Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "firstname",
+                        "value": "Hugo"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Toto"
+                    },
+                    {
+                        "name": "status",
+                        "value": "0"
+                    },
+                    {
+                        "name": "active",
+                        "value": "0"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "00b0001f-7ab9-4cce-8a2d-be45ded086a5",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "9328e31d-207b-46d9-94e9-444df0769d17",
+            "name": "getAdminAccess",
+            "url": "http://localhost:3000/admin",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-03-21T20:20:18.158Z",
+            "modified": "2023-03-21T20:47:37.250Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "pincode",
+                        "value": "3630"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "85e0a644-c9fb-4bb5-8bba-2efb07cc0762",
+            "colId": "259d4bda-61d2-430a-a55e-1cc15c965ee3",
+            "containerId": "f4f7e8eb-48f5-45fc-bb0a-74982cb1e17f",
+            "name": "global",
+            "url": "http://localhost:3000/statistics",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-03-21T21:24:55.863Z",
+            "modified": "2023-03-21T21:25:11.272Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
