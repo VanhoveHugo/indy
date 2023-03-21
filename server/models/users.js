@@ -43,19 +43,34 @@ class User {
     }
 
     static find(id, callback) {
-        db.query("SELECT id, created, firstname, lastname, status, active FROM users WHERE id = ?", [id], (err, result) => callback(new User(result[0])))
+        db.query("SELECT * FROM users WHERE id = ?", [id], (err, result) => {
+            if (err) throw err
+            callback(new User(result[0]))
+        })
     }
     static all(callback) {
-        db.query("SELECT * FROM users ORDER BY firstname DESC", (err, result) => callback(result.map((d) => new User(d))))
+        db.query("SELECT * FROM users ORDER BY firstname DESC", (err, result) => {
+            if (err) throw err
+            callback(result.map((d) => new User(d)))
+        })
     }
     static create(firstname, lastname, status, active, callback) {
-        db.query('INSERT INTO users (firstname, lastname, status, active) VALUES(?,?,?,?)', [firstname, lastname, status, active], (err, res) => callback(res))
+        db.query('INSERT INTO users (firstname, lastname, status, active) VALUES(?,?,?,?)', [firstname, lastname, status, active], (err, res) => {
+            if (err) throw err
+            callback(res)
+        })
     }
     static update(id, firstname, lastname, status, active, callback) {
-        db.query('UPDATE users SET firstname = ?, lastname = ?, status = ?, active = ? WHERE id = ?', [firstname, lastname, status, active, id], (err, res) => callback(res))
+        db.query('UPDATE users SET firstname = ?, lastname = ?, status = ?, active = ? WHERE id = ?', [firstname, lastname, status, active, id], (err, res) => {
+            if (err) throw err
+            callback(res)
+        })
     }
     static delete(id, callback) {
-        db.query('DELETE FROM users WHERE id = ?', [id], (err, res) => callback(res))
+        db.query('UPDATE users SET firstname = ?, lastname = ?, status = ?, active = ? WHERE id = ?', ["NaN", "NaN", 0, 0, id], (err, res) => {
+            if (err) throw err
+            callback(res)
+        })
     }
 }
 

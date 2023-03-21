@@ -1,4 +1,4 @@
-const Errors = {
+const Response = {
     internalServerError: (res) => {
         res.status(500).send('Le serveur a rencontré une erreur interne')
     },
@@ -7,7 +7,13 @@ const Errors = {
     },
     noContent: (res) => {
         res.status(204).send('La requête a été traitée avec succès mais ne renvoie pas de contenu')
+    },
+    badRequest: (res) => {
+        res.status(400).send('La requête est incorrecte')
+    },
+    success: (res) => {
+        res.status(200).send('La requête a été traitée avec succès')
     }
 }
 
-module.exports = Errors
+module.exports = Response
