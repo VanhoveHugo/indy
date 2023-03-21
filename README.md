@@ -14,10 +14,16 @@ API for restaurant owners to manage tips.
 git clone https://github.com/VanhoveHugo/indy.git
 ```
 
-2. Run the following command to start the application
+2. Install dependencies in server file
+
+```bash
+cd indy/server && npm install
+```
+
+3. Run the following command to start the application
 
 ```bash
 docker-compose up
 ```
 
-3. Open your browser and go to http://localhost:3000
+4. Open your browser and go to http://localhost:3000
